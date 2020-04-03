@@ -9,15 +9,10 @@ const getInventory = (req, res) =>{
 }
 
 const postProduct = (req, res) => {
-  const {img, product, price} = req.body 
-//   const newProduct = {
-    //       img: img,
-    //       product: product,
-    //       price: price
-    //   }
-    //   post_product().push(newProduct)
+  const {img, product, price} = req.body
+
     
-    const db = req.app.post('db')
+    const db = req.app.get('db')
     db.create_product(img, product, price).then(result => {
         res.status(200).send(result)
 
