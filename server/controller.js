@@ -18,7 +18,7 @@ const postProduct = (req, res) => {
     //   post_product().push(newProduct)
     
     const db = req.app.post('db')
-    db.post_product(img, product, price).then(result => {
+    db.create_product(img, product, price).then(result => {
         res.status(200).send(result)
 
     })
