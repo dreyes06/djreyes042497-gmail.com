@@ -1,0 +1,6 @@
+CREATE TABLE inventory(
+  inventory_id SERIAL PRIMARY KEY,
+  img TEXT NOT NULL,
+  product VARCHAR(200) NOT NULL,
+  price VARCHAR(10000) NOT NULL
+);

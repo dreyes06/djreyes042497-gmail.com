@@ -1,6 +1,6 @@
-getInventory = (req, res) =>{
+const getInventory = (req, res) =>{
     const db = req.app.get('db')
-
+    
     db.get_inventory().then(result => {
         res.status(200).send(result)
     }).catch(error => {
@@ -10,7 +10,7 @@ getInventory = (req, res) =>{
 
 
 module.exports = {
-    getInventory,
+    getInventory
     // getProduct,
     // postProduct,
     // removeProduct
